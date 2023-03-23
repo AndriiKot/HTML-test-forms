@@ -7,13 +7,14 @@
   <title>HTML forms</title>
 </head>
 <body>
+
   
-  <form action="#">
-    <label for="first_name">Enter your first name:</label><br>
-    <input type="text" id="first_name" value="Andrii"><br><br>
-    <label for="last_name">Enter your last name:</label><br>
-    <input type="text" id="last_name" value="Kotsiuba"><br><br>
-    
+  <form  name="form_1" action="#" onsubmit="return valid()">
+    <label for="form-1-first-name">Enter your name:</label><br>
+    <input type="text" id="form-1-first-name" name="first_name" value="Andrii">
+
+  
+    <!--  
     <input type="checkbox" id="HTML" name="HTML" value="html" checked>
     <lable>HTML</lable><br>
     <input type="checkbox" id="CSS" name="CSS" value="css" checked>
@@ -25,8 +26,22 @@
     <input type="checkbox" id="Pascal" name="Pascal" value="pascal">
     <label for="Pascal">Pascal</label><br>    
     <input type="checkbox" id="Javascript" name="Javascript" value="Javascript" checked>
-    <label for="Javascript">Javascript</label><br><br>
-    <input type="submit">
+    <label for="Javascript">Javascript</label><br><br> -->
+    <input type="submit" value="Submit">   
   </form>
+  <script>
+    function valid(){
+      let x = document.forms["form_1"]['first_name'].value;
+      if(x == ""){
+        alert("DDDDDD")
+        return false
+      }
+    }
+  </script>
+
+  
+  
+  
+ 
 </body>
 </html>
