@@ -11,10 +11,11 @@
   
   <form  name="form_1" action="#" onsubmit="return valid()">
     <label for="form-1-first-name">Enter your name:</label><br>
-    <input type="text" id="form-1-first-name" name="first_name" value="Andrii">
+    <input type="text" id="form-1-first-name" name="first_name" value="Andrii"><br>
 
-  
-    <!--  
+    <label for="form-1-last-name">Enter your name:</label><br>
+    <input type="text" id="form-1-last-name" name="last_name" value="Kotsiuba"><br>
+
     <input type="checkbox" id="HTML" name="HTML" value="html" checked>
     <lable>HTML</lable><br>
     <input type="checkbox" id="CSS" name="CSS" value="css" checked>
@@ -26,14 +27,17 @@
     <input type="checkbox" id="Pascal" name="Pascal" value="pascal">
     <label for="Pascal">Pascal</label><br>    
     <input type="checkbox" id="Javascript" name="Javascript" value="Javascript" checked>
-    <label for="Javascript">Javascript</label><br><br> -->
+    <label for="Javascript">Javascript</label><br><br> 
+
     <input type="submit" value="Submit">   
+
   </form>
   <script>
     function valid(){
-      let x = document.forms["form_1"]['first_name'].value;
-      if(x == ""){
-        alert("DDDDDD")
+      let first_name = document.forms["form_1"]['first_name'].value;
+      let last_name = document.forms['form_1']['last_name'].value;
+      if( first_name == '' || last_name == ''){
+        alert("Full Name is not valid!")
         return false
       }
     }
